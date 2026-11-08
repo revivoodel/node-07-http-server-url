@@ -11,3 +11,12 @@
 const http = require("http");
 
 // write your code here
+
+const PORT = 3000;
+http.createServer((req, res) => {
+    console.log("Method:", req.method);
+    console.log("URL:", req.url);
+    console.log("HTTP Version:", req.httpVersion);
+    res.end("Request logged in the terminal");
+
+}).listen(PORT);

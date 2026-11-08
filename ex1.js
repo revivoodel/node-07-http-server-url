@@ -8,3 +8,8 @@
 const http = require("http");
 
 // write your code here (create the server and call server.listen(3000))
+http.createServer((req, res) => {
+    console.log("Request received");
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("Hello from Node Server!");
+}).listen(3000);

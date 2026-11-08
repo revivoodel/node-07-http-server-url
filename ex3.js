@@ -6,3 +6,9 @@
 const http = require("http");
 
 // write your code here
+const PORT=3000;
+http.createServer((req,res)=>{
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(req.headers));
+  
+}).listen(PORT);
